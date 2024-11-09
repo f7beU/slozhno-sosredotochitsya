@@ -3,14 +3,14 @@
   --bold: 700;
   --regular: 400;
   --accent-color: #ff0070;
-  --h1-color: #db00ff;
-  --h2-color: #000028;
-  --h3-color: #ff0070;
+  --title-color: #db00ff;
+  --card-title-text-color: #ff0070;
+  --paragraph-name-text-color: #000028;
   --text-color: #f1b2ce;
   --shadow-color: #ff0070;
-  --menu-color:#ff0070;
+  --button-color:#ff0070;
   --decor-color: #ff0070;
   --element-color: #ff0070;
   --element-shadow: rgba(255, 0, 112, 0.9);
-  --menu-hover: #ff007040;
+  --button-hover: #ff007040;
 }
