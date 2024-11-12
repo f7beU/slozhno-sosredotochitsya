@@ -1,9 +1,10 @@
 .page.theme_light {
-  background-image: url(/images/cover-image-light.png);
+  background-image: url(../images/cover-image-light.png);
   background-color: #fff1f7;
 
   --accent-color: #ff8dcb;
   --title-color: #ffc2e6;
+  --header-title-text-color: #353430;
   --card-title-text-color: #353430;
   --paragraph-name-text-color: #353430;
   --text-color: #353430;
@@ -13,4 +14,11 @@
   --element-color: transparent;
   --element-shadow: transparent;
   --button-hover: #32312d40;
+}
+
+@media (prefers-color-scheme: light) {
+  .page {
+    background-image: url(../images/cover-image-light.png);
+    background-color: #fff1f7;
+  }
 }
