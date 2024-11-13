@@ -61,11 +61,11 @@ h4 {
 .header {
   position: relative;
   width: 100%;
-  min-height: 668px;
-  height: 100vh;
+  min-height: 648px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   padding: 0;
+  margin-bottom: 10px;
 }
 
 .decorated-zone::before {
@@ -125,7 +125,6 @@ h4 {
 .header__theme-menu-list {
   margin: 0;
   padding: 0;
-  margin-bottom: 5px;
   display: flex;
   flex-direction: column;
   align-content: space-between;
@@ -173,11 +172,6 @@ h4 {
   cursor: auto;
 }
 
-.title {
-  padding: 0;
-  margin-bottom: 20px;
-}
-
 .header-title {
   margin: 0 auto;
   padding: 0;
@@ -192,8 +186,11 @@ h4 {
   padding: 0;
   min-width: 355px;
   margin: auto;
-  margin-top: 35px;
   width: 100%;
+}
+
+.header-title__text-color {
+  color: var(--header-title-text-color);
 }
 
 .title__text {
@@ -229,6 +226,12 @@ h4 {
   min-width: min-content;
 }
 
+.text__block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .card-text {
   margin: 0;
   padding: 0;
@@ -239,10 +242,8 @@ h4 {
   gap: 10px;
 }
 
-.card-text__block {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.card-text__irritation {
+  gap: 20px;
 }
 
 .text {
@@ -317,10 +318,10 @@ a:focus {
 .footer {
   position: relative;
   margin: 0 auto;
+  margin-top: 10px;
   width: 100%;
-  height: 100vh;
   padding: 0;
-  min-height: 667px;
+  min-height: 648px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -334,24 +335,23 @@ a:focus {
   color: var(--title-color);
   font-family: var(--font-family);
   text-shadow: 2px 2px 0 var(--shadow-color);
-  margin: 0;
   text-align: justify;
 }
 
-@media (768px <= width < 1024px) {
+@media (width >= 768px) {
   .page {
     padding: 20px;
     gap: 60px;
   }
 
   .header {
-    min-height: 1024px;
+    min-height: 984px;
+    margin-bottom: 20px;
   }
 
   .title {
     display: flex;
     justify-content: left;
-    margin-bottom: 40px;
     margin-left: -20px;
   }
 
@@ -369,7 +369,6 @@ a:focus {
     margin: 0;
     padding: 0;
     width: 364px;
-    margin-top: -80px;
   }
 
   .main {
@@ -391,14 +390,12 @@ a:focus {
     max-width: 236px;
   }
 
-  .card-text {
-    gap: 20px;
-  }
-
-  .card-text__block {
+  .text__block {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 
   .gallery {
@@ -449,18 +446,18 @@ a:focus {
   }
 
   .footer {
-    min-height: 1064px;
+    min-height: 984px;
+    margin-top: 20px;
+  }
+
+  .footer-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
 @media (width >= 1024px) {
-  .page {
-    padding: 20px;
-    gap: 60px;
-  }
-
   .header {
-    min-height: 768px;
+    min-height: 728px;
   }
 
   .header__theme-menu {
@@ -478,34 +475,8 @@ a:focus {
     gap: 10px;
   }
 
-  h1 {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
-  .title {
-    display: flex;
-    justify-content: left;
-    margin-bottom: 40px;
-    margin-left: -20px;
-  }
-
-  .header-title {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-  }
-
   .header-title__text {
-    margin: 0;
-    padding: 0;
     width: 491px;
-    margin-top: -80px;
-  }
-
-  .content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
   }
 
   .card__title {
@@ -522,61 +493,12 @@ a:focus {
     gap: 20px;
   }
 
-  .title__text {
-    margin: 0;
-    padding: 0;
-  }
-
-  .card-text__block {
-    margin: 0;
-    padding: 0;
-    background-color: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 10px;
-  }
-
   .gallery-images {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 260px 315px 426px;
-    gap: 20px;
   }
 
-  .img1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  .img2 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
-  }
-
-  .img3 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 4;
-  }
-
-  .img4 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-  .img5 {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
+  .footer {
+    min-height: 728px;
+    margin-top: 25px;
   }
 }
