@@ -5,7 +5,6 @@
   flex-direction: column;
   gap: 40px;
   position: relative;
-  padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   background-image: url(../images/cover-image-dark.png);
   background-color: #000028;
   background-size: cover;
@@ -59,13 +58,13 @@ h4 {
 }
 
 .header {
+  height: 100vh;
   position: relative;
   width: 100%;
   min-height: 648px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  padding: 0;
-  margin-bottom: 10px;
+  padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
 }
 
 .decorated-zone::before {
@@ -73,8 +72,8 @@ h4 {
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   border-top: 1px solid var(--decor-color);
   border-right: 1px solid var(--decor-color);
 }
@@ -84,16 +83,16 @@ h4 {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 0;
-  bottom: 0;
+  left: 10px;
+  bottom: 10px;
   border-bottom: 1px solid var(--decor-color);
   border-left: 1px solid var(--decor-color);
 }
 
 .decorated {
   position: absolute;
-  top: 0;
-  right: 30px;
+  top: 10px;
+  right: 40px;
   display: block;
   color: var(--element-color);
   font-family: var(--font-family);
@@ -202,6 +201,7 @@ h4 {
 
 .main {
   margin: 0 auto;
+  padding: 0 clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -316,11 +316,11 @@ a:focus {
 }
 
 .footer {
+  height: 100vh;
   position: relative;
   margin: 0 auto;
-  margin-top: 10px;
   width: 100%;
-  padding: 0;
+  padding: 0 clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   min-height: 648px;
   display: flex;
   justify-content: center;
@@ -340,13 +340,27 @@ a:focus {
 
 @media (width >= 768px) {
   .page {
-    padding: 20px;
     gap: 60px;
   }
 
   .header {
     min-height: 984px;
-    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .decorated {
+    top: 20px;
+    right: 50px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    left: 20px;
+    bottom: 20px;
   }
 
   .title {
@@ -373,6 +387,7 @@ a:focus {
 
   .main {
     margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -447,7 +462,7 @@ a:focus {
 
   .footer {
     min-height: 984px;
-    margin-top: 20px;
+    padding: 0 20px;
   }
 
   .footer-title {
@@ -499,6 +514,9 @@ a:focus {
 
   .footer {
     min-height: 728px;
-    margin-top: 25px;
+  }
+
+  .footer-title {
+    margin-top: 10px;
   }
 }
